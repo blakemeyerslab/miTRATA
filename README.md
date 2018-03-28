@@ -3,7 +3,7 @@ miTRATA: a web-based tool for microRNA Truncation and Tailing Analysis.
 
 version: v1  
 updated: 03/28/2018  
-published: [Bioinformatics](https://academic.oup.com/bioinformatics/article/32/3/450/1743711)    
+published: [Bioinformatics](https://academic.oup.com/bioinformatics/article/32/3/450/1743711)    
 webtool:  https://wasabi.ddpsc.org/~apps/ta/
 
 Please refer to the [wiki](https://github.com/pupatel/phasiRNAClassifier/wiki) page for the overview of this classification pipeline along with the detailed information about scripts, installing dependencies, usage, and output files.

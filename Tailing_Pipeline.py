@@ -44,13 +44,13 @@ global OUTPUT_DIR
 #OUTPUT_DIR_NAME="Tailing_output_"+Date+"_"+Time
 
 def RunBowtie(InputFile, BOWTIE_INDEX, Aligned, Unaligned, AlignmentOutput, pas):
-    command = "bowtie --concise "                   +\
-              "-v 0 "                                   +\
-              "--threads %s " % nthread                 +\
-                        "%s " % BOWTIE_INDEX            +\
-                     "-r %s " % InputFile               +\
-                    "%s " % AlignmentOutput        +\
-               "--al %s " % Aligned            +\
+    # command = "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/glibc-2.14/lib; bowtie  -v 0 "
+    command = "bowtie  -v 0 "			+\
+              "--threads %s " % nthread         +\
+                        "%s " % BOWTIE_INDEX    +\
+                     "-r %s " % InputFile       +\
+                    "%s " % AlignmentOutput     +\
+               "--al %s " % Aligned             +\
                "--un %s " % Unaligned         
     
     if os.system(command) == 0:
@@ -80,12 +80,17 @@ def pLCS_finder(inputfile):
     abundances={}
     tail_length={}
  
-    fh_in= IN.readline() ## Remove header
-    for line in IN:
-        #print(line)
-        fields = line.split("\t")
-        seq, value = fields[0], int(fields[1])
-        abundances[seq] = value
+    for index, line in enumerate(IN.readlines()):
+        fields = line.strip().split('\t')
+        if index == 0:
+            # if the line is the first line make sure its a header line before we skip (bug 1482)
+            if "".join(sorted(set(fields[0]))) == 'ACGT' and fields[1].isnumeric():
+                # first line is also a data line
+                seq, value = fields[0], int(fields[1])
+                abundances[seq] = value
+        else:
+            seq, value = fields[0], int(fields[1])
+            abundances[seq] = value
      
     LogFile = os.path.splitext(OutputFile)[0] + '.size_distribution'
     tempInput = 'tempInput' +InputFile+ '.txt'
@@ -175,7 +180,8 @@ def pLCS_finder(inputfile):
         else:
             Output.write("%s\t" % tag)
             Output.write("%d\t" % abundances[tag])    
-            Output.write("None\n")
+            #Output.write("None\n")
+            Output.write("\n")
          
          
      
@@ -629,6 +635,7 @@ def genrate_Plots(inputfile):
             set_properties(ax[lib])
     
     #    plt.show()
+        plt.autoscale()
         plt.savefig('%s-%s.png' % (miRname,miRsize),bbox_inches='tight') #bbox_inches='tight' is used to reduce left and right margins in matplotlib plot
         plt.savefig('%s-%s.pdf' % (miRname,miRsize),bbox_inches='tight')
         plt.close()

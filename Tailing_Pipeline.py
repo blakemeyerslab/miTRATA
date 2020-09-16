@@ -2,8 +2,10 @@
 # coding=utf-8
 
 #Created by Parth Patel, DBI @ University of Delaware, Newark, Delaware 19717
-#Date created: 10/08/2014 Modified on 11/2/2015 Line number 350,297
+#Date created: 10/08/2014 (Last modification on 11/2/2015)
 
+#Edited by Deepti Ramachandruni, Donald Danforth Plant Science Center
+#Last modification on 08/27/2020
 
 import os
 import sys

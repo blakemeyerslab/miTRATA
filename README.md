@@ -41,9 +41,9 @@ published: [Bioinformatics](https://academic.oup.com/bioinformatics/article/32/3
 
 miTRATA is the first web-based tool for microRNA Truncation and Tailing Analysis—the analysis of 3′ modifications of microRNAs including the loss or gain of nucleotides relative to the canonical sequence. miTRATA is implemented in Python and employs parallel processing modules to enhance its scalability when analyzing multiple small RNA (sRNA) sequencing datasets. It utilizes miRBase, currently version 21, as a source of known microRNAs for analysis. miTRATA notifies user(s) via email to download as well as visualize the results online. 
 
-miTRATA’s strengths lie in (i) its biologist-focused web interface, (ii) improved scalability via parallel processing and (iii) its uniqueness as a webtool to perform microRNA truncation and tailing analysis.
+miTRATA’s strengths lie in 1) its biologist-focused web interface, 2) improved scalability via parallel processing, and 3) its uniqueness as a webtool to perform microRNA truncation and tailing analysis.
 
 It requires the following inputs:
 1. Small RNA sequence files. (tag count file)
-2. Genome of interest. (aka the bowtie index)
-3. List of mature miRNA sequence(s) from miRBase. (FASTA format)
+2. Genome of interest (aka the bowtie index)
+3. List of mature miRNA sequence(s) from miRBase (FASTA format)

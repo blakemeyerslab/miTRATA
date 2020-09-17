@@ -5,8 +5,8 @@ Version: v1.3
 Updated: 08/27/2020  
 Original author: Parth Patel (parth1415@gmail.com) 
 
+
 About the standalone version of this tool (this repository)
---
 
 See information on scripts and dependencies [https://github.com/pupatel/miTRATA/wiki/Scripts-and-Dependencies].
 
@@ -31,7 +31,6 @@ text files stores tailing and truncation information (i.e. tail patterns and the
 
 
 About the web-based version of this tool 
---
 
 URL:  https://wasabi.ddpsc.org/~apps/ta/
 published: [Bioinformatics](https://academic.oup.com/bioinformatics/article/32/3/450/1743711) 

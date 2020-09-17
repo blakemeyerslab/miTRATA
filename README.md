@@ -13,7 +13,7 @@ Please refer to the [wiki](https://github.com/pupatel/miTRATA/wiki) page for the
 About the standalone version of this tool (this repository)
 --
 
-See information on scripts and dependencies (https://github.com/pupatel/miTRATA/wiki/Scripts-and-Dependencies).
+See information on [scripts and dependencies](https://github.com/pupatel/miTRATA/wiki/Scripts-and-Dependencies).
 
 Script parameters:
 
@@ -39,6 +39,7 @@ About the web-based version of this tool
 --
 
 URL:  https://wasabi.ddpsc.org/~apps/ta/
+
 published: [Bioinformatics](https://academic.oup.com/bioinformatics/article/32/3/450/1743711) 
 
 miTRATA is the first web-based tool for microRNA Truncation and Tailing Analysis—the analysis of 3′ modifications of microRNAs including the loss or gain of nucleotides relative to the canonical sequence. miTRATA is implemented in Python and employs parallel processing modules to enhance its scalability when analyzing multiple small RNA (sRNA) sequencing datasets. It utilizes miRBase, currently version 21, as a source of known microRNAs for analysis. miTRATA notifies user(s) via email to download as well as visualize the results online. 

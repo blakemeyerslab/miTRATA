@@ -17,22 +17,23 @@ See information on [scripts and dependencies](https://github.com/pupatel/miTRATA
 
 Script parameters:
 
-PATH to the INPUT FOLDER- Folder containing sequence file(s) in Tag_count format with “tag” preceding “count”; no blank lines separating sequences are permitted. Tag should be separated from count by only 1 TAB.
+1. PATH to the INPUT FOLDER- Folder containing sequence file(s) in Tag_count format with “tag” preceding “count”; no blank lines separating sequences are permitted. Tag should be separated from count by only 1 TAB.
 
-PATH to the GENOME INDEX- Bowtie index for the plant/animal of interest
+2. PATH to the GENOME INDEX- Bowtie index for the plant/animal of interest
 
-miRNA file- Sequences must be in FASTA format with the ">name" proceeding each sequence; no blank lines separating sequences are permitted. Only A, U, C, G, T are allowed. Keep the name of the sequences short to retain optimal quality of the figures. For example, instead of ">osa-miR523f MIMAT0023516 Oryza sativa" as a name for a sequence in the FASTA file, use ">osa-miR818f"
+3. miRNA file- Sequences must be in FASTA format with the ">name" proceeding each sequence; no blank lines separating sequences are permitted. Only A, U, C, G, T are allowed. Keep the name of the sequences short to retain optimal quality of the figures. For example, instead of ">osa-miR523f MIMAT0023516 Oryza sativa" as a name for a sequence in the FASTA file, use ">osa-miR818f"
 
-PATH to the OUTPUT FOLDER- Output folder for results
+4. PATH to the OUTPUT FOLDER- Output folder for results
 
-Running the script
+Running the script:
+
 python3.4 ["PATH to the INPUT FOLDER"] ["PATH to the GENOME INDEX"] [miRNA file] ["PATH to the OUTPUT FOLDER"]
 
 Output File
 Results Folder
 merged_full.pdf — a single pdf with all images
 individual pdfs
-text files stores tailing and truncation information (i.e. tail patterns and their lengths)
+text files store tailing and truncation information (i.e. tail patterns and their lengths)
 
 
 About the web-based version of this tool 

@@ -2,13 +2,17 @@ miTRATA: a tool for microRNA Truncation and Tailing Analysis
 ---
 
 Version: v1.3 
+
 Updated: 08/27/2020  
+
 Original author: Parth Patel (parth1415@gmail.com) 
+
+Please refer to the [wiki](https://github.com/pupatel/miTRATA/wiki) page for the overview of this pipeline along with the detailed information about a standalone version, including scripts, installing dependencies, usage, and output files.
 
 
 About the standalone version of this tool (this repository)
 
-See information on scripts and dependencies [https://github.com/pupatel/miTRATA/wiki/Scripts-and-Dependencies].
+See information on scripts and dependencies (https://github.com/pupatel/miTRATA/wiki/Scripts-and-Dependencies).
 
 Script parameters:
 
@@ -43,5 +47,3 @@ It requires the following inputs:
 1. Small RNA sequence files. (tag count file)
 2. Genome of interest. (aka the bowtie index)
 3. List of mature miRNA sequence(s) from miRBase. (FASTA format)
-
-Please refer to the [wiki](https://github.com/pupatel/miTRATA/wiki) page for the overview of this pipeline along with the detailed information about a standalone version, including scripts, installing dependencies, usage, and output files.

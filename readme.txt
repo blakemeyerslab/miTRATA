@@ -1,25 +1,16 @@
-About Tailing Analysis:
+miTRATA: a tool for microRNA Truncation and Tailing Analysis
+---
 
-miTRATA is the first web-based tool for microRNA Truncation and Tailing Analysis—the analysis of 3′ modifications of microRNAs including the loss or gain of nucleotides relative to the canonical sequence. miTRATA is implemented in Python and employs parallel processing modules to enhance its scalability when analyzing multiple small RNA (sRNA) sequencing datasets. It utilizes miRBase, currently version 21, as a source of known microRNAs for analysis. miTRATA notifies user(s) via email to download as well as visualize the results online. 
+Version: v1.3 
+Updated: 08/27/2020  
+Original author: Parth Patel (parth1415@gmail.com) 
 
-miTRATA’s strengths lie in (i) its biologist-focused web interface, (ii) improved scalability via parallel processing and (iii) its uniqueness as a webtool to perform microRNA truncation and tailing analysis.
+About the standalone version of this tool (this repository)
+--
 
-The service consists of a website (under "Web") and a background job (under "Handler").
-The service needs its own database and working directory.
-The service reads from $ALLDATA.
-The service reads from genome databases used by the "next_gen" service.
-The genome databases are expected to reside on the DB server of the "next_gen" service.
-The website is not associated with a particular genome, expression or methylation database.
-The website is usually viewed as a child website of a "next_gen" website.
+See information on scripts and dependencies [https://github.com/pupatel/miTRATA/wiki/Scripts-and-Dependencies].
 
-The "service_name" is "ta".  The "website_name" is "ta".
-
-It requires the following inputs:
-1. Small RNA sequence files. (tag count file)
-2. Genome of interest. (aka the bowtie index)
-3. List of mature miRNA sequence(s) from miRBase. (FASTA format)
-
-Standalone Script parameters:
+Script parameters:
 
 PATH to the INPUT FOLDER- Folder containing sequence file(s) in Tag_count format with “tag” preceding “count”; no blank lines separating sequences are permitted. Tag should be separated from count by only 1 TAB.
 
@@ -32,9 +23,26 @@ PATH to the OUTPUT FOLDER- Output folder for results
 Running the script
 python3.4 ["PATH to the INPUT FOLDER"] ["PATH to the GENOME INDEX"] [miRNA file] ["PATH to the OUTPUT FOLDER"]
 
-Example Usage python3.4 Tailing_Pipeline_v13.py "/Tailing /Input " "/GenomeIndex/MAIZE_AGPv2_genome" miRNA.fa "/Tailing /Output"
 Output File
 Results Folder
 merged_full.pdf — a single pdf with all images
 individual pdfs
 text files stores tailing and truncation information (i.e. tail patterns and their lengths)
+
+
+About the web-based version of this tool 
+--
+
+URL:  https://wasabi.ddpsc.org/~apps/ta/
+published: [Bioinformatics](https://academic.oup.com/bioinformatics/article/32/3/450/1743711) 
+
+miTRATA is the first web-based tool for microRNA Truncation and Tailing Analysis—the analysis of 3′ modifications of microRNAs including the loss or gain of nucleotides relative to the canonical sequence. miTRATA is implemented in Python and employs parallel processing modules to enhance its scalability when analyzing multiple small RNA (sRNA) sequencing datasets. It utilizes miRBase, currently version 21, as a source of known microRNAs for analysis. miTRATA notifies user(s) via email to download as well as visualize the results online. 
+
+miTRATA’s strengths lie in (i) its biologist-focused web interface, (ii) improved scalability via parallel processing and (iii) its uniqueness as a webtool to perform microRNA truncation and tailing analysis.
+
+It requires the following inputs:
+1. Small RNA sequence files. (tag count file)
+2. Genome of interest. (aka the bowtie index)
+3. List of mature miRNA sequence(s) from miRBase. (FASTA format)
+
+Please refer to the [wiki](https://github.com/pupatel/miTRATA/wiki) page for the overview of this pipeline along with the detailed information about a standalone version, including scripts, installing dependencies, usage, and output files.

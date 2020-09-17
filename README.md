@@ -1,5 +1,5 @@
 miTRATA: a tool for microRNA Truncation and Tailing Analysis
----
+-----
 
 Version: v1.3 
 
@@ -11,6 +11,7 @@ Please refer to the [wiki](https://github.com/pupatel/miTRATA/wiki) page for the
 
 
 About the standalone version of this tool (this repository)
+--
 
 See information on scripts and dependencies (https://github.com/pupatel/miTRATA/wiki/Scripts-and-Dependencies).
 
@@ -35,6 +36,7 @@ text files stores tailing and truncation information (i.e. tail patterns and the
 
 
 About the web-based version of this tool 
+--
 
 URL:  https://wasabi.ddpsc.org/~apps/ta/
 published: [Bioinformatics](https://academic.oup.com/bioinformatics/article/32/3/450/1743711) 
